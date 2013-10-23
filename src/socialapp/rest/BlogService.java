@@ -3,7 +3,7 @@ package socialapp.rest;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
-@Path("/blog")
+@Path("/rest")
 public class BlogService {
 	@Path("hello")
 	@GET
