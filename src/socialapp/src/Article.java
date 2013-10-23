@@ -1,4 +1,4 @@
-package com.pc.wsd;
+package socialapp.src;
 
 import java.util.Date;
 

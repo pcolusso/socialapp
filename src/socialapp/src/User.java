@@ -1,4 +1,4 @@
-package com.pc.wsd;
+package socialapp.src;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,7 +86,4 @@ public class User {
 	public void setFriends(List<Friend> friends) {
 		this.friends = friends;
 	}
-	
-	
-	
 }

@@ -1,7 +1,8 @@
-package com.pc.wsd;
+package socialapp.src;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import javax.xml.bind.*;
@@ -27,5 +28,15 @@ public class SocialApp {
 	
 	public Users getUsers() {
 		return users;
+	}
+	
+	public void save() throws IOException, JAXBException
+	{	 
+		JAXBContext jc = JAXBContext.newInstance(Users.class);
+		Marshaller m = jc.createMarshaller();
+		
+		FileOutputStream fout = new FileOutputStream(filePath);
+		m.marshal(users, fout);
+		fout.close();
 	}
 }

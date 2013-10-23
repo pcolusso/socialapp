@@ -1,4 +1,4 @@
-package com.pc.wsd;
+package socialapp.src;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -26,11 +26,6 @@ public class Users implements Serializable {
 		this.users = users;
 	}
 	
-	public void addUser(String name, String email, String desc, String password)
-	{
-		users.add(new User(1, name, email, desc, password));
-	}
-	
 	public void addTestUser(String name)
 	{
 		User u = new User(1, name, name + "@test,com", "desc", "pass");
@@ -46,6 +41,19 @@ public class Users implements Serializable {
 		u.setFriends(friends);
 		
 		users.add(u);
+	}
+	
+	public void register(String name, String email, String desc, String password)
+	{
+		users.add(new User(1, name, email, desc, password));
+	}
+	
+	public User logon(String email, String password)
+	{
+		for (User user : users)
+			if (user.getEmail() == email && user.getPassword() == password)
+				return user;
+		return null; //Logon failed
 	}
 	
 }

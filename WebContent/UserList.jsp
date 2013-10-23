@@ -9,18 +9,15 @@
 </head>
 <body>
 
-	<% String filePath=application.getRealPath("WEB-INF/users.xml"); 
-		
-		com.pc.wsd.SocialApp app = new com.pc.wsd.SocialApp();
-		app.setFilePath(filePath);
-		
-		System.out.println(app.getUsers());
-	
+	<%
+		String filePath=application.getRealPath("WEB-INF/users.xml"); 
+			
+			socialapp.src.SocialApp app = new socialapp.src.SocialApp();
+			app.setFilePath(filePath);
+			
+			System.out.println(app.getUsers());
 	%>
-	<!-- 
-	<jsp:useBean id="diaryApp" class="com.pc.wsd.SocialApp" scope="application">
-    	<jsp:setProperty name="socialApp" property="filePath" value="<%=filePath%>"/>
-	</jsp:useBean>-->
+	socialapp.src.SocialApp diaryApp = new socialapp.src.SocialApp();
 
 </body>
 </html>
